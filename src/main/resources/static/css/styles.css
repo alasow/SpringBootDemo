@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 50px;
+    z-index: 10;
+}
+
+/* Ocean Animation */
+.ocean {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: #0077B6;
+    overflow: hidden;
+}
+
+/* Create Two Waves */
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2017/06/13/12/24/water-2392757_1280.png');
+    background-size: cover;
+    animation: wave-animation 6s infinite linear;
+}
+
+/* Wave Animation */
+.wave:nth-child(2) {
+    top: 0;
+    opacity: 0.5;
+    animation-delay: 3s;
+}
+
+/* Keyframe Animation */
+@keyframes wave-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
